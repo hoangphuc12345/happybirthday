@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Ngủ Ngon!</title>
+    
+    <!-- Import Google Fonts -->
+    <link href="https://cdn2.fptshop.com.vn/unsafe/1920x0/filters:quality(100)/2024_4_24_638495150657895496_hinh-anh-chuc-ngu-ngon.jpg" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Dancing Script', cursive;
+            background: linear-gradient(to right, #003366, #4B0082);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .goodnight-container {
+            text-align: center;
+            z-index: 2;
+            position: relative;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 7vw;
+            color: #ffffff;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+            font-family: 'Lobster', cursive;
+            animation: slideIn 3s ease-in-out infinite alternate;
+        }
+
+        .fade-text {
+            font-size: 5vw;
+            color: #ffffe0;
+            font-family: 'Dancing Script', cursive;
+            opacity: 0;
+            animation: fadeIn 4s ease-in-out forwards;
+        }
+
+        .goodnight-image {
+            max-width: 50vw;
+            height: auto;
+            margin: 20px auto;
+            display: block;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateX(-10px); }
+            100% { transform: translateX(10px); }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .twinkle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            animation: twinkle 2s infinite ease-in-out;
+            top: calc(100% * var(--y));
+            left: calc(100% * var(--x));
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+
+        /* Snowflake styling */
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: #FFF;
+            font-size: 1em;
+            opacity: 0.8;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="goodnight-container">
+        <h1>Chúc Khánh Huyền Ngủ Ngon!</h1>
+        <p id="fadeText" class="fade-text">Chúc em có một giấc mơ thật đẹp</p>
+        <img src="https://truongthanhaudio.com/upload/original-image/loi-chuc-ngu-ngon.jpg" alt="Goodnight Scene" class="goodnight-image">
+    </div>
+
+    <!-- Twinkling star effect -->
+    <div class="twinkle" style="--x: 0.3; --y: 0.2;"></div>
+    <div class="twinkle" style="--x: 0.7; --y: 0.5;"></div>
+    <div class="twinkle" style="--x: 0.5; --y: 0.8;"></div>
+    <div class="twinkle" style="--x: 0.9; --y: 0.3;"></div>
+
+    <!-- Snowfall effect using JavaScript -->
+    <script>
+        // Function to create snowflakes
+        function createSnowflakes() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.textContent = '❄'; // Snowflake character
+
+            // Random position and animation duration for each snowflake
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.fontSize = Math.random() * 1.5 + 1 + 'em';
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+
+            // Remove snowflake after it falls off the screen
+            snowflake.addEventListener('animationend', () => {
+                snowflake.remove();
+            });
+
+            document.body.appendChild(snowflake);
+        }
+
+        // Create snowflakes at intervals
+        setInterval(createSnowflakes, 200);
+    </script>
+
+    <!-- Soothing lullaby audio -->
+    <audio autoplay loop>
+        <source src="https://www.example.com/lullaby-music.mp3" type="audio/mpeg">
+        Trình duyệt của bạn không hỗ trợ trình phát nhạc.
+    </audio>
+</body>
+</html>
