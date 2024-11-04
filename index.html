@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chúc Ngủ Ngon!</title>
+    <title>Phiếu bé ngoan!</title>
     
     <!-- Import Google Fonts -->
-    <link href="https://cdn2.fptshop.com.vn/unsafe/1920x0/filters:quality(100)/2024_4_24_638495150657895496_hinh-anh-chuc-ngu-ngon.jpg" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lobster&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -59,6 +59,16 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
+        /* Style for the flower image */
+        .flower-image {
+            width: 15vw;
+            height: auto;
+            margin-top: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         @keyframes slideIn {
             0% { transform: translateX(-10px); }
             100% { transform: translateX(10px); }
@@ -103,9 +113,12 @@
 </head>
 <body>
     <div class="goodnight-container">
-        <h1>Chúc Khánh Huyền Ngủ Ngon!</h1>
-        <p id="fadeText" class="fade-text">Chúc em có một giấc mơ thật đẹp</p>
-        <img src="https://truongthanhaudio.com/upload/original-image/loi-chuc-ngu-ngon.jpg" alt="Goodnight Scene" class="goodnight-image">
+        <h1>Phiếu bé ngoan!</h1>
+        <p id="fadeText" class="fade-text">Luôn ngoan như hôm nay nhá </p>
+        <img src="https://scontent.fhan5-2.fna.fbcdn.net/v/t39.30808-6/460390188_543171551604450_9130151422155583675_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=znoqvpEzvOUQ7kNvgG3WRsr&_nc_zt=23&_nc_ht=scontent.fhan5-2.fna&_nc_gid=AMg3H0OrI20RjDpsuD-2wpZ&oh=00_AYAtA0kKOcLX8xUtqUiCOStgXw7MmriOYtbzFESMIuVkVw&oe=672E9ED9" alt="Goodnight Scene" class="goodnight-image">
+        
+        <!-- Flower image below the main image -->
+        <img src="https://free.vector6.com/wp-content/uploads/2020/05/0zls2cx-Vector-Hoa-Hong-0004.jpg" alt="Flower" class="flower-image">
     </div>
 
     <!-- Twinkling star effect -->
@@ -116,26 +129,19 @@
 
     <!-- Snowfall effect using JavaScript -->
     <script>
-        // Function to create snowflakes
         function createSnowflakes() {
             const snowflake = document.createElement('div');
             snowflake.classList.add('snowflake');
-            snowflake.textContent = '❄'; // Snowflake character
-
-            // Random position and animation duration for each snowflake
+            snowflake.textContent = '❄';
             snowflake.style.left = Math.random() * 100 + 'vw';
             snowflake.style.fontSize = Math.random() * 1.5 + 1 + 'em';
             snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
-
-            // Remove snowflake after it falls off the screen
             snowflake.addEventListener('animationend', () => {
                 snowflake.remove();
             });
-
             document.body.appendChild(snowflake);
         }
 
-        // Create snowflakes at intervals
         setInterval(createSnowflakes, 200);
     </script>
 
